@@ -116,7 +116,7 @@ const ContactMe = () => {
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">Contact me</ModalHeader>
                             <ModalBody>
                                 <Input
                                     color="primary"

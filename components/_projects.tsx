@@ -3,6 +3,7 @@ import ProjectCards from "./reusables/_projects_card";
 import imageGC from "@/assets/images/gymcheckp.png";
 import imageIW from "@/assets/images/833shots_so.png";
 import imageED from "@/assets/images/fadsfasd.png";
+import imageFN from "@/assets/images/531shots_so.png";
 import { SiKotlin, SiMysql, SiPhp, SiFirebase, SiReact, SiNextdotjs, SiCsharp, SiDotnet, SiMicrosoftsqlserver } from "react-icons/si";
 
 const projects = [
@@ -15,7 +16,7 @@ const projects = [
     {
         title:'ForaNeo',
         description:'Mobile application for cheap rental apartments to students.',
-        image:imageGC,
+        image:imageFN,
         icons:[SiKotlin, SiFirebase]
     },
     {
