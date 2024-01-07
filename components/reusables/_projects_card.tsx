@@ -4,11 +4,13 @@ interface ProjectCardsProps{
     image:StaticImageData;
     title?:string;
     description?:string;
+    proyect_url:string;
     icon:IconType[];
 }
-import { Card, CardBody, CardFooter, Chip } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, Chip } from "@nextui-org/react";
 import Image, { StaticImageData } from "next/image";
 import { IconType } from "react-icons";
+import { FaCode } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 
 const ProjectCards:React.FC<ProjectCardsProps> = ({
@@ -16,8 +18,15 @@ const ProjectCards:React.FC<ProjectCardsProps> = ({
     image,
     title,
     description,
+    proyect_url,
     icon
 }) => {
+
+    function sendTo(url: string) {
+        window.open(url)
+    }
+
+
     return (
         <div className={twMerge(
             `   
@@ -37,7 +46,7 @@ const ProjectCards:React.FC<ProjectCardsProps> = ({
                 <CardFooter className="flex flex-col gap-2 w-full items-start">
                     <h2 className="font-black text-white">{title != null?title:'Title'}</h2>
                     <p className="text-white">{description != null?description:'Description'}</p>
-                    <ul className="flex flex-row gap-3 mt-1">
+                    <ul className="flex flex-row gap-3 mt-1 w-full">
                         {
                         Array.isArray(icon)? (icon as Array<React.ElementType>).map((IconComponent, index)=>(
                             <Chip
@@ -49,6 +58,11 @@ const ProjectCards:React.FC<ProjectCardsProps> = ({
                             ></Chip>
                         )):'no'
                         }
+                        <li className="flex justify-end w-full">
+                            <Button className="bg-fourth text-secondary" isIconOnly  onClick={()=>sendTo(proyect_url)}> 
+                                <FaCode/>
+                            </Button>
+                        </li>
                     </ul>
                 </CardFooter>
             </Card>

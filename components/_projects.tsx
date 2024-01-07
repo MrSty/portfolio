@@ -11,25 +11,29 @@ const projects = [
         title:'GymCheck',
         description:'Mobile application for managing clients of different gyms.',
         image:imageGC,
-        icons:[SiKotlin, SiPhp, SiMysql]
+        icons:[SiKotlin, SiPhp, SiMysql],
+        proyect_url:'https://github.com/MrSty/GymCheck'
     },
     {
         title:'ForaNeo',
         description:'Mobile application for cheap rental apartments to students.',
         image:imageFN,
-        icons:[SiKotlin, SiFirebase]
+        icons:[SiKotlin, SiFirebase],
+        proyect_url:'https://github.com/MrSty/Fora-Neo'
     },
     {
         title:'Innova-Web',
         description:'Page for a product of a small company which I wanted to make a presentation about who they are and about the product.',
         image:imageIW,
-        icons:[SiNextdotjs,SiReact]
+        icons:[SiNextdotjs,SiReact],
+        proyect_url:'https://github.com/MrSty/Innova-web'
     },
     {
         title:'Expedoc',
         description:'Web application for a university that records files of professors with personal and professional information.',
         image:imageED,
-        icons:[SiCsharp, SiDotnet, SiMicrosoftsqlserver]
+        icons:[SiCsharp, SiDotnet, SiMicrosoftsqlserver],
+        proyect_url:'https://github.com/MrSty/EXPEDOC'
     },
 ]
 
@@ -43,7 +47,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 w-fit items items-start gap-7 my-10">
                 {
                     projects.map((element, index)=>(
-                        <ProjectCards image={element.image} icon={element.icons} title={element.title} description={element.description} key={index}/>
+                        <ProjectCards image={element.image} icon={element.icons} title={element.title} proyect_url={element.proyect_url} description={element.description} key={index}/>
                     ))
                 }
             </div>

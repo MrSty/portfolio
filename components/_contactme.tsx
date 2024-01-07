@@ -2,10 +2,11 @@
 import imageGC from "@/assets/images/gymcheckp.png";
 import imageIW from "@/assets/images/833shots_so.png";
 import imageED from "@/assets/images/fadsfasd.png";
+import emailjs from '@emailjs/browser';
 import { SiKotlin, SiMysql, SiPhp, SiFirebase, SiReact, SiNextdotjs, SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiLinkedin, SiWhatsapp, SiGithub } from "react-icons/si";
 import { motion } from "framer-motion";
 import { FaFilePdf, FaLock, FaMailBulk } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Textarea, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link } from "@nextui-org/react";
 
 const projects = [
@@ -38,6 +39,18 @@ const projects = [
 const ContactMe = () => {
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const form = useRef();
+
+    const sendEmail = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_8a4rwwc', 'template_fgkqh85', form.current, '_k-oUMoI-VJRzO1OD')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     function send(where: string) {
         if (where === 'wha') {
@@ -113,42 +126,46 @@ const ContactMe = () => {
                     closeButton: "hover:bg-red-200 active:bg-white/10 text-red-500 text-xl",
                 }}
             >
-                <ModalContent>
-                    {(onClose) => (
-                        <>
-                            <ModalHeader className="flex flex-col gap-1">Contact me</ModalHeader>
-                            <ModalBody>
-                                <Input
-                                    color="primary"
-                                    autoFocus
-                                    type="text"
-                                    label="Name"
-                                    variant="bordered"
-                                    classNames={{
-                                        label: "text-primary",
-                                    }}
-                                    className="text-white"
-                                />
-                                <Textarea
-                                    label="Content"
-                                    variant="bordered"
-                                    classNames={{
-                                        label: "text-primary"
-                                    }}
-                                    className="text-white"
-                                />
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button className="text-red-700 font-black bg-transparent" onPress={onClose}>
-                                    Close
-                                </Button>
-                                <Button type="submit" className="bg-secondary text-terciary font-bold" onPress={onClose}>
-                                    Send
-                                </Button>
-                            </ModalFooter>
-                        </>
-                    )}
-                </ModalContent>
+                <form ref={form} onSubmit={sendEmail}>
+                    <ModalContent>
+                        {(onClose) => (
+                            <>
+                                <ModalHeader className="flex flex-col gap-1">Contact me</ModalHeader>
+                                <ModalBody>
+                                    <Input
+                                        color="primary"
+                                        name={"from_name"}
+                                        autoFocus
+                                        type="text"
+                                        label="Name"
+                                        variant="bordered"
+                                        classNames={{
+                                            label: "text-primary",
+                                        }}
+                                        className="text-white"
+                                    />
+                                    <Textarea
+                                        name={"message"}
+                                        label="Content"
+                                        variant="bordered"
+                                        classNames={{
+                                            label: "text-primary"
+                                        }}
+                                        className="text-white"
+                                    />
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button className="text-red-700 font-black bg-transparent" onPress={onClose}>
+                                        Close
+                                    </Button>
+                                    <Button type="submit" value={"Send"} className="bg-secondary text-terciary font-bold" onPress={onClose}>
+                                        Send
+                                    </Button>
+                                </ModalFooter>
+                            </>
+                        )}
+                    </ModalContent>
+                </form>
             </Modal>
 
         </section>
