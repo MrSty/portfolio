@@ -29,7 +29,7 @@ const Header:React.FC<HeaderProps> = ({
                 {children}
             </main>
         </div>
-    );
+    )
 }
 
 export default Header;

@@ -2,6 +2,7 @@ import Header from '@/components/_header'
 import AboutMe from '@/components/_aboutMe';
 import Image from 'next/image'
 import Projects from '@/components/_projects';
+import ContactMe from '@/components/_contactme';
 
 export default function Home() {
   return (
@@ -9,12 +10,14 @@ export default function Home() {
       <div className='
       mt-2
       h-fit
-      w-3/5
+      2xl:w-3/5
+      w-4/5      
       flex
       flex-col
     '>
         <AboutMe/>
         <Projects />
+        <ContactMe/>
     </div>
     </div>
   );
