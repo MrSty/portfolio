@@ -1,9 +1,9 @@
 import Header from '@/components/_header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Poppins({ subsets: ['latin'], weight:"200"})
+const inter = Montserrat({ subsets: ['latin'], weight:"200"})
 
 export const metadata: Metadata = {
   title: 'Mrsty Portfolio',

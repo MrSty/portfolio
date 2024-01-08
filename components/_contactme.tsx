@@ -69,7 +69,7 @@ const ContactMe = () => {
         <section className="flex
         mt-14
         mb-5
-        h-[20rem]
+        h-[25rem]
         w-full
         gap-4
         overflow-hidden" id="contact">
@@ -81,7 +81,7 @@ const ContactMe = () => {
                     w-full
                 "
             >
-                <div className="absolute rounded-3xl h-[20rem] w-full opacity-70 inline-block bg-terciary overflow-hidden">
+                <div className="absolute rounded-3xl h-[25rem] w-full opacity-70 inline-block bg-terciary overflow-hidden">
                     <motion.div
                         className="rounded-full bg-fourth h-96 w-96 absolute -right-14 -top-80 blur-3xl"
                     />
@@ -90,25 +90,27 @@ const ContactMe = () => {
                     />
                 </div>
                 <div className="flex flex-col h-full absolute w-full items-center">
-                    <h2 className="text-fourth mt-10 font-black text-2xl">Contact</h2>
-                    <p>You can get more info about me below, also you can mail me :)</p>
-                    <div className="flex pl-8 mt-20 gap-6 items-center">
+                    <h2 className="text-fourth mt-10 font-black text-[2rem] md:text-[2.5rem]">Contact</h2>
+                    <p className="mx-5 mt-2">You can get more info about me below, also you can mail me :)</p>
+                    <div className="flex flex-col-reverse md:flex-row md:pl-8 mt-20 gap-6 items-center">
                         <Button onPress={onOpen} className="bg-fourth text-secondary font-black w-44 rounded-3xl" size="lg" variant="shadow">
                             Send a mail
                         </Button>
+                        <div className="flex gap-6 items-center">
+                            <Button className="text-fourth text-lg rounded-full hover:text-secondary hover:bg-fourth" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('linkd')}>
+                                <SiLinkedin />
+                            </Button>
+                            <Button className="text-fourth text-lg rounded-full hover:text-secondary hover:bg-fourth" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('wha')}>
+                                <SiWhatsapp />
+                            </Button>
+                            <Button className="text-fourth text-lg rounded-full hover:text-secondary hover:bg-fourth" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('github')}>
+                                <SiGithub />
+                            </Button>
+                            <Button className="text-fourth text-lg rounded-full hover:text-secondary hover:bg-fourth" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('cv')}>
+                                <FaFilePdf />
+                            </Button>
+                        </div>
 
-                        <Button className="text-fourth text-lg rounded-full" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('linkd')}>
-                            <SiLinkedin />
-                        </Button>
-                        <Button className="text-fourth text-lg rounded-full" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('wha')}>
-                            <SiWhatsapp />
-                        </Button>
-                        <Button className="text-fourth text-lg rounded-full" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('github')}>
-                            <SiGithub />
-                        </Button>
-                        <Button className="text-fourth text-lg rounded-full" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('cv')}>
-                            <FaFilePdf />
-                        </Button>
                     </div>
                 </div>
             </div>
