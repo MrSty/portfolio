@@ -68,7 +68,7 @@ const AboutMe = () => {
                 </div>
                 <div className="flex flex-col z-10 pb-10 items-center md:items-start">
                     <p className="
-                font-sans text-3xl lg:text-[2.1rem] text-fourth
+                font-sans text-3xl lg:text-[3rem] text-fourth
                 md:px-8
                 py-5
                 text-left
@@ -77,7 +77,7 @@ const AboutMe = () => {
                 select-none
                 font-black
                 ">Hello! I am Marcelo Rivera, a Systems Engineering student passionate about technology and programming.</p>
-                    <p className="px-8 md:pl-8 md:pr-36 pt-10 text-fourth text-xl font-bold">Welcome to my portfolio, where I share my journey, projects, and achievements so far.</p>
+                    <p className="px-8 md:pl-8 md:pr-36 mt-[10%] text-fourth text-xl lg:text-2xl font-bold">Welcome to my portfolio, where I share my journey, projects, and achievements so far.</p>
                 </div>
             </div>
             <div

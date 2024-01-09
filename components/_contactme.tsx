@@ -91,7 +91,7 @@ const ContactMe = () => {
                 </div>
                 <div className="flex flex-col h-full absolute w-full items-center">
                     <h2 className="text-fourth mt-10 font-black text-[2rem] md:text-[3rem] font-sans">Contact</h2>
-                    <p className="mx-5 mt-2">You can get more info about me below, also you can mail me :)</p>
+                    <p className="mx-5 mt-2 lg:text-2xl text-lg">You can get more info about me below, also you can mail me :)</p>
                     <div className="flex flex-col-reverse md:flex-row md:pl-8 mt-20 gap-6 items-center">
                         <Button onPress={onOpen} className="bg-fourth text-secondary font-black w-44 rounded-3xl" size="lg" variant="shadow">
                             Send a mail
