@@ -40,7 +40,7 @@ const projects = [
 const Projects = () => {
     return (
         <section className="flex flex-col mt-14 justify-center items-center bg-secondary rounded-3xl text-fourth" id="projects">
-            <h2 className="text-[2rem] md:text-[2.5rem] py-10 mt-4 font-black ">Projects</h2>
+            <h2 className="text-[2rem] md:text-[3rem] py-10 mt-4 font-black font-sans">Projects</h2>
             <div className="flex w-full flex-col px-10 lg:px-36 py-5">
                 <p className="text-xl font-extrabold">Here are some of my personal projects, some of which are university projects and others of my own interest. The university projects have helped me to develop my technical skills and learn about different areas of engineering, while the personal projects have allowed me to explore my interests and develop my own ideas.</p>
             </div>

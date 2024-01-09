@@ -75,9 +75,9 @@ const AboutMe = () => {
                 mt-10
                 w-4/5
                 select-none
-                font-medium
+                font-black
                 ">Hello! I am Marcelo Rivera, a Systems Engineering student passionate about technology and programming.</p>
-                    <p className="pl-8 md:pr-36 pt-10 text-fourth lg:text-xl font-bold">Welcome to my portfolio, where I share my journey, projects, and achievements so far.</p>
+                    <p className="px-8 md:pl-8 md:pr-36 pt-10 text-fourth text-xl font-bold">Welcome to my portfolio, where I share my journey, projects, and achievements so far.</p>
                 </div>
             </div>
             <div

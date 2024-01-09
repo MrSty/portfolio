@@ -44,8 +44,8 @@ const ProjectCards:React.FC<ProjectCardsProps> = ({
                     <Image src={image} height={200} alt="imagen gymcheck" className="w-auto "/>
                 </CardBody>
                 <CardFooter className="flex flex-col gap-2 w-full items-start">
-                    <h2 className="font-black text-white">{title != null?title:'Title'}</h2>
-                    <p className="text-white">{description != null?description:'Description'}</p>
+                    <h2 className="font-black text-white text-xl font-sans">{title != null?title:'Title'}</h2>
+                    <p className="text-white font-bold">{description != null?description:'Description'}</p>
                     <ul className="flex flex-row gap-3 mt-1 w-full">
                         {
                         Array.isArray(icon)? (icon as Array<React.ElementType>).map((IconComponent, index)=>(
