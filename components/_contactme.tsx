@@ -121,7 +121,6 @@ const ContactMe = () => {
                 size="2xl"
                 classNames={{
                     body: "py-6",
-                    backdrop: "bg-[#153B44]/60 backdrop-opacity-40",
                     base: "border-[#292f46] bg-[#2D6E7E] dark:bg-[#2D6E7E] text-[#C6DE41]",
                     header: "",
                     footer: "",

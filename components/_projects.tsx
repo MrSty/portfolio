@@ -42,6 +42,7 @@ const projects = [
         proyect_url:'https://github.com/MrSty/EXPEDOC',
         hide_proyect_btn:true,
         hide_live_btn:true,
+        isExpedoc:true,
     },
 ]
 
@@ -55,7 +56,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 w-fit items items-start gap-7 my-10">
                 {
                     projects.map((element, index)=>(
-                        <ProjectCards image={element.image} icon={element.icons} title={element.title} proyect_url={element.proyect_url} description={element.description} hideProyectBtn={element.hide_proyect_btn} hideLiveBtn={element.hide_live_btn} live_url={element.live_url} hideMoreInfoBtn={element.hide_more_btn} key={index}/>
+                        <ProjectCards image={element.image} icon={element.icons} title={element.title} proyect_url={element.proyect_url} description={element.description} hideProyectBtn={element.hide_proyect_btn} hideLiveBtn={element.hide_live_btn} live_url={element.live_url} hideMoreInfoBtn={element.hide_more_btn} isExpedoc={element.isExpedoc} key={index}/>
                     ))
                 }
             </div>
