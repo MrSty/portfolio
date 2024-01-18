@@ -66,18 +66,18 @@ const AboutMe = () => {
                         }}
                     />
                 </div>
-                <div className="flex flex-col z-10 pb-10 items-center md:items-start">
+                <div className="flex md:px-12 flex-col z-10 py-10 items-center md:items-start sm:gap-6 lg:gap-y-10 select-none">
                     <p className="
                 font-sans text-3xl lg:text-[3rem] text-fourth
-                md:px-8
-                py-5
+                lg:leading-[3.6rem]
+                sm:leading-[2rem]
+                tracking-[0.1rem]
                 text-left
-                mt-10
+                px-0
                 w-4/5
-                select-none
                 font-black
                 ">Hello! I am Marcelo Rivera, a Systems Engineering student passionate about technology and programming.</p>
-                    <p className="px-8 md:pl-8 md:pr-36 mt-[10%] text-fourth text-xl lg:text-2xl font-bold">Welcome to my portfolio, where I share my journey, projects, and achievements so far.</p>
+                    <p className="px-4 md:px-0 md:pr-36 text-fourth text-xl lg:text-2xl font-bold">Welcome to my portfolio, where I share my journey, projects, and achievements so far.</p>
                 </div>
             </div>
             <div
@@ -92,7 +92,7 @@ const AboutMe = () => {
                 "
             >
                 <Image src={imgp} className="w-full" alt="profile image"></Image>
-                <div className="flex my-10 gap-[5%] px-5 justify-center w-full">
+                <div className="flex my-10 gap-[5%] px-5 justify-center w-full h-full items-center">
 
                     <Button className="text-fourth text-lg rounded-full hover:text-secondary hover:bg-fourth" size="lg" color="secondary" isIconOnly variant="shadow" onClick={() => send('linkd')}>
                         <SiLinkedin />

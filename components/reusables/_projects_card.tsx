@@ -77,10 +77,11 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({
                         {
                             Array.isArray(icon) ? (icon as Array<React.ElementType>).map((IconComponent, index) => (
                                 <Chip
-                                    className="flex items-center justify-center"
+                                    className="flex items-center px-0 py-5 justify-center "
                                     key={index}
                                     startContent={<IconComponent className="text-[1.5rem] ml-3 text-fourth" key={index} />}
-                                    variant="shadow"
+                                    variant="solid"
+                                    radius='sm'
                                     color="secondary"
                                 ></Chip>
                             )) : 'no'
