@@ -44,16 +44,6 @@ const projects = [
         hide_live_btn:true,
         isExpedoc:true,
     },
-    {
-        title:'Expedoc',
-        description:'Web application for a university that records files of professors with personal and professional information.',
-        image:imageED,
-        icons:[SiCsharp, SiDotnet, SiMicrosoftsqlserver],
-        proyect_url:'https://github.com/MrSty/EXPEDOC',
-        hide_proyect_btn:true,
-        hide_live_btn:true,
-        isExpedoc:true,
-    },
 ]
 
 const Projects = () => {
